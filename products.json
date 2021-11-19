@@ -1,0 +1,80 @@
+[
+  {
+    "name": "Market Does Not Care Water Bottle",
+    "design": "C&C",
+    "price": 15.2,
+    "img": "https://i.ibb.co/rk3pqdK/market-does-not-care.png"
+  },
+  {
+    "name": "Onsemeet Water Bottle",
+    "design": "Onsemeet",
+    "price": 10,
+    "img": "https://i.ibb.co/XLDjgr0/onsemeet.png"
+  },
+  {
+    "name": "Business Water Bottle",
+    "design": "B&B",
+    "price": 25.2,
+    "img": "https://i.ibb.co/BKKzz49/business.png"
+  },
+  {
+    "name": "Couch Surfer Water Bottle",
+    "design": "C&S",
+    "price": 20,
+    "img": "https://i.ibb.co/ng0BsZs/couch-surfer.png"
+  },
+  {
+    "name": "Do Your Business Water Bottle",
+    "design": "DYB Brothers",
+    "price": 7,
+    "img": "https://i.ibb.co/Y8LRRgL/do-your-buseness.png"
+  },
+  {
+    "name": "Drop Ship Boss Water Bottle",
+    "design": "DSP",
+    "price": 15.2,
+    "img": "https://i.ibb.co/zxvkZv8/drop-ship-boss.png"
+  },
+  {
+    "name": "E-Commerce Water Bottle",
+    "design": "C&C",
+    "price": 20.3,
+    "img": "https://i.ibb.co/JkzWvxv/ecommerce.png"
+  },
+  {
+    "name": "Exotic Ferora Water Bottle",
+    "design": "Exotic F",
+    "price": 18.8,
+    "img": "https://i.ibb.co/JzygMHq/exotic-ferora.png"
+  },
+  {
+    "name": "Friends Forever Water Bottle",
+    "design": "F&F",
+    "price": 5.5,
+    "img": "https://i.ibb.co/6ZR63Rb/friends-forever.png"
+  },
+  {
+    "name": "Happy Face Water Bottle",
+    "design": "H&F Brothers",
+    "price": 13.3,
+    "img": "https://i.ibb.co/LYnHn0x/happy-face.png"
+  },
+  {
+    "name": "I'm as Volatile as Bitcoin Water Bottle",
+    "design": "Bitcoin",
+    "price": 50,
+    "img": "https://i.ibb.co/fMThkv2/I-m-as-volatile-as-bitcoin.png"
+  },
+  {
+    "name": "Lone Wolf Water Bottle",
+    "design": "Wolf",
+    "price": 15.2,
+    "img": "https://i.ibb.co/X2hS27x/lonewolf.png"
+  },
+  {
+    "name": "Love at First Site Water Bottle",
+    "design": "Love Birds",
+    "price": 14.4,
+    "img": "https://i.ibb.co/88HJFN5/love-at-first-site.png"
+  }
+]
