@@ -1,6 +1,6 @@
-import { Container, Grid } from '@mui/material';
+import { Container, Grid, Typography } from '@mui/material';
 import React from 'react';
-import Product from '../../Shared/Product/Product';
+import Product from '../Shared/Product/Product';
 
 const products = [
     {
@@ -65,12 +65,13 @@ const products = [
     },
 ]
 
-const Products = () => {
+const Explore = () => {
     return (
         <Container>
+            <Typography style={{ color: 'rgba(109, 108, 112 )' }} my={4} variant="h5">Explore All the Cycles</Typography>
             <Grid container spacing={2}>
                 {
-                    products.slice(0, 6).map(product => <Product
+                    products.map(product => <Product
                         product={product}
                     />)
                 }
@@ -80,4 +81,4 @@ const Products = () => {
     );
 };
 
-export default Products;
+export default Explore;

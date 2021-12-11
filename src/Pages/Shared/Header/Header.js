@@ -2,8 +2,12 @@ import { AppBar, Button, IconButton, Toolbar, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import MenuIcon from '@mui/icons-material/Menu';
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 
 const Header = () => {
+    const { user, logoutUser } = useAuth();
+
     return (
         <Box sx={{ flexGrow: 1, }}>
             <AppBar position="static">
@@ -20,13 +24,21 @@ const Header = () => {
 
                     <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'center' }} gap={2}>
                         <Typography variant="h6" component="div" >
-                            Dashboard
+                            <NavLink style={{ textDecoration: 'none', color: 'white' }} to="/home">Home</NavLink>
                         </Typography>
                         <Typography variant="h6" component="div" >
-                            Explore
+                            <NavLink style={{ textDecoration: 'none', color: 'white' }} to="/dashboard">Dashboard</NavLink>
+                        </Typography>
+                        <Typography variant="h6" component="div" >
+                            <NavLink style={{ textDecoration: 'none', color: 'white' }} to="/explore">Explore</NavLink>
                         </Typography>
                     </Box>
-                    <Button style={{ justifyContent: 'end' }} color="inherit">Login</Button>
+                    {user?.email ?
+                        <Button onClick={logoutUser} style={{ justifyContent: 'end' }} color="inherit">Logout</Button>
+                        :
+                        <NavLink style={{ textDecoration: 'none', color: 'white' }} to="/login"><Button style={{ justifyContent: 'end' }} color="inherit">Login</Button></NavLink>
+                    }
+
                 </Toolbar>
             </AppBar>
         </Box >
