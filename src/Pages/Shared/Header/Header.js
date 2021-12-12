@@ -33,7 +33,7 @@ const Header = () => {
                             <NavLink style={{ textDecoration: 'none', color: 'white' }} to="/explore">Explore</NavLink>
                         </Typography>
                     </Box>
-                    {user?.email ?
+                    {user?.displayName ?
                         <Button onClick={logoutUser} style={{ justifyContent: 'end' }} color="inherit">Logout</Button>
                         :
                         <NavLink style={{ textDecoration: 'none', color: 'white' }} to="/login"><Button style={{ justifyContent: 'end' }} color="inherit">Login</Button></NavLink>

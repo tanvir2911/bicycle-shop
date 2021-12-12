@@ -1,5 +1,5 @@
 import { Button, Grid } from '@mui/material';
-import React from 'react';
+import React, { useEffect } from 'react';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
@@ -10,7 +10,9 @@ import { NavLink } from 'react-router-dom';
 
 
 const Product = ({ product }) => {
-    const { title, description, price, img } = product;
+    const { _id, title, description, price, img } = product;
+
+
 
     return (
         <Grid item xs={6} md={4}>
@@ -31,7 +33,7 @@ const Product = ({ product }) => {
                     </Typography>
                 </CardContent>
                 <CardActions disableSpacing>
-                    <NavLink style={{ textDecoration: 'none' }} to="/purchase"><Button size="small">Buy Now</Button></NavLink>
+                    <NavLink style={{ textDecoration: 'none' }} to={`/products/${_id}`}><Button size="small">Buy Now</Button></NavLink>
                 </CardActions>
 
             </Card>

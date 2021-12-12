@@ -24,9 +24,10 @@ const Login = () => {
 
         loginUser(loginData.email, loginData.password, location, history)
 
-
+        console.log(loginData)
         e.preventDefault();
     }
+
 
 
 
@@ -62,10 +63,10 @@ const Login = () => {
                     <br />
                     <br />
                     <br />
-                    <Button type="submit" sx={{ width: '80%' }} variant="contained">Register</Button>
+                    <Button type="submit" sx={{ width: '80%' }} variant="contained">Login</Button>
                     <br />
                     <br />
-                    <NavLink to="/login">New User?? Register Here</NavLink>
+                    <NavLink to="/registration">New User?? Register Here</NavLink>
                     <p>-----------------------------</p>
                     <Button onClick={() => googleSignIn(location, history)} variant="text">Sign In With Google</Button>
                 </form>}

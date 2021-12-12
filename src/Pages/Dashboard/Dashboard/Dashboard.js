@@ -20,12 +20,17 @@ import MyOrders from '../MyOrders/MyOrders';
 import Review from '../Review/Review';
 import Pay from '../Pay/Pay';
 import useAuth from '../../../hooks/useAuth';
+import ManageProducts from '../ManageProducts/ManageProducts';
+import ManageAllOrders from '../ManageAllOrders/ManageAllOrders';
+import AddAProduct from '../AddAProduct/AddAProduct';
+import MakeAdmin from '../MakeAdmin/MakeAdmin';
+import AdminRoute from '../../Login/AdminRoute/AdminRoute';
 
 
 const drawerWidth = 200;
 
 const Dashboard = (props) => {
-    const { logoutUser } = useAuth();
+    const { logoutUser, admin } = useAuth();
     let { path, url } = useRouteMatch();
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -39,7 +44,10 @@ const Dashboard = (props) => {
             <Toolbar />
             <Divider />
 
-            <List sx={{ textAlign: 'left', marginLeft: 2 }}>
+            {!admin && <List sx={{ textAlign: 'left', marginLeft: 2 }}>
+                <NavLink to="/">Home</NavLink>
+                <br />
+                <br />
                 <NavLink to={`${url}/myOrders`}>My Orders</NavLink>
                 <br />
                 <br />
@@ -50,7 +58,25 @@ const Dashboard = (props) => {
                 <br />
                 <br />
                 <NavLink to=""><Button onClick={logoutUser}>Logout</Button></NavLink>
-            </List>
+            </List>}
+            {admin && <List sx={{ textAlign: 'left', marginLeft: 2 }}>
+                <NavLink to="/">Home</NavLink>
+                <br />
+                <br />
+                <NavLink to={`${url}/manageAllOrders`}>Manage All Orders</NavLink>
+                <br />
+                <br />
+                <NavLink to={`${url}/addAProduct`}>Add A Product</NavLink>
+                <br />
+                <br />
+                <NavLink to={`${url}/makeAdmin`}>Make Admin</NavLink>
+                <br />
+                <br />
+                <NavLink to={`${url}/manageProducts`}>Manage Products</NavLink>
+                <br />
+                <br />
+                <NavLink to=""><Button onClick={logoutUser}>Logout</Button></NavLink>
+            </List>}
         </div>
     );
 
@@ -132,6 +158,18 @@ const Dashboard = (props) => {
                     <Route path={`${path}/review`}>
                         <Review></Review>
                     </Route>
+                    <AdminRoute path={`${path}/manageAllOrders`}>
+                        <ManageAllOrders></ManageAllOrders>
+                    </AdminRoute>
+                    <AdminRoute path={`${path}/addAProduct`}>
+                        <AddAProduct></AddAProduct>
+                    </AdminRoute>
+                    <AdminRoute path={`${path}/makeAdmin`}>
+                        <MakeAdmin></MakeAdmin>
+                    </AdminRoute>
+                    <AdminRoute path={`${path}/manageProducts`}>
+                        <ManageProducts></ManageProducts>
+                    </AdminRoute>
                 </Switch>
 
             </Box>
